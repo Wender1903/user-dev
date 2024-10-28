@@ -1,0 +1,60 @@
+.newsletter {
+    background-color: var(--cor-destaque-secundario);
+    padding: 32px 12.5%;
+    text-align: center;
+}
+
+.newsletter h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 31px;
+    line-height: 38px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--cor-texto-principal);
+}
+
+.newsletter p {
+    font-family: var(--fonte-texto);
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--cor-texto-principal);
+    margin-bottom: 16px;
+}
+
+.newsletter input {
+    width: 70%;
+    border: 2.5px solid var(--cor-links);
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 32px;
+}
+
+.newsletter input::placeholder {
+    color: var(--cor-links);
+    font-family: var(--fonte-texto);
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.newsletter button {
+    margin: 12px 5px;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 32px;
+    background-color: var(--cor-fundo-botao);
+    color: var(--cor-de-fundo);
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .newsletter h3 {
+        font-size: 25px;
+    }
+
+}

@@ -1,0 +1,147 @@
+.rodape {
+    background-color: var(--cor-texto-principal);
+    margin: 0 auto;
+    padding: 60px 12.5%;
+}
+
+.rodape-coluna__logo img{
+    width: 79px;
+    height: 48px;
+} 
+
+.rodape-coluna-logo__texto {
+    font-family: var(--fonte-texto);
+    color: var(--cor-destaque-secundario);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+
+}
+.rodape-coluna__titulo {
+    font-family: var(--fonte-texto);
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--cor-texto);
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+
+
+.rodape__linha {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.rodape-coluna__lista {
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto);
+    font-size: 16px;
+    line-height: 19px;
+    list-style-type: none;
+}
+
+.rodape-coluna-lista__item {
+    margin-bottom: 8px;
+}
+
+.rodape-coluna-lista__item:last-child {
+    margin-bottom: 0;
+}
+
+.rodape-coluna__link {
+    text-decoration: none;
+    color: var(--cor-texto);
+}
+
+.rodape__linha:last-child {
+    border-top: 1.5px solid var(--cor-destaque-secundario);
+    padding-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+
+.rodape-coluna-lista__cartao {
+    display: inline-grid;
+    grid-template-columns: repeat(5, auto);
+    list-style-type: none;
+    gap: 16px;
+}
+
+.rodape-coluna-lista__redes {
+    display: inline-grid;
+    grid-template-columns: repeat(3, auto);
+    list-style-type: none;
+    gap: 16px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .rodape__linha:first-child {
+        display: grid;
+        grid-template-areas:
+        "logo logo logo"
+        "funcionamento institucional informacoes";
+        justify-content: space-between;
+        column-gap: 68px;
+    }
+
+    .rodape__linha:first-child .rodape-coluna__logo {
+        grid-area: logo;
+        text-align: center;
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+        border-bottom: 1.5px solid var(--cor-destaque-secundario);
+    }
+
+
+    .rodape__linha:first-child .rodape__coluna:nth-child(2) {
+        grid-area: funcionamento;
+        margin-bottom: 24px;
+    }
+
+    .rodape__linha:first-child .rodape__coluna:nth-child(3) {
+        grid-area: institucional;
+    }
+
+    .rodape__linha:first-child .rodape__coluna:nth-child(4) {
+        grid-area: informacoes;
+    }
+
+    .rodape__linha:last-child {
+        border-top: none;
+        padding-top: 32px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .rodape__linha:first-child {
+        display: grid;
+        grid-template-areas: 
+        "logo logo logo"
+        "funcionamento funcionamento funcionamento"
+        "institucional institucional institucional"
+        "informacoes informacoes informacoes";
+        gap: 24px;
+        justify-content: center;
+    }
+    .rodape__linha:last-child {
+        grid-template-areas: 
+        "pagamento pagamento"
+        "redes redes";
+        justify-content: center;
+        gap: 24px;
+        
+    }
+
+    .rodape__linha:last-child .rodape__coluna:nth-child(1) {
+        grid-area: pagamento;
+    }
+
+    .rodape__linha:last-child .rodape__coluna:nth-child(2) {
+        grid-area: redes;
+    }
+    
+}
+
